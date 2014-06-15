@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PageDown Demo Page</title>
+        <script type="text/javascript" src="Markdown.Converter.js"></script>
+    </head>    
+    <body>
+        <textarea id="pagedown-input"></textarea>
+        <button onclick="ConvertMarkdown()">Convert to Markdown</button>
+        <div id="pagedown-preview"></div>
+        
+<script type="text/javascript">
+function ConvertMarkdown(){
+	var md = document.getElementById("pagedown-input").value;
+	var converter = new Markdown.Converter();
+	document.getElementById("pagedown-preview").innerHTML =converter.makeHtml(md);
+}
+</script>
+    </body>
+</html>
